@@ -1,8 +1,13 @@
+
+var secondsCount = Math.floor( Math.random() * 5 + 6);
+var timerInterval;
 var removeRowBtns = document.getElementsByClassName("removeRowBtn")
 var tableRows = document.getElementsByTagName("tr")
 
 for(var i = 0; i < removeRowBtns.length; i++) {
-removeRowBtns[i].addEventListener("click", function() {
-  tableRows[i].parentNode.removeChild(tableRows[i]);
+   removeRowBtns[i].addEventListener("click", function(e) {
+      var raw = document.getElementById(e.target.getAttribute("rawLink"));
+      raw.parentNode.removeChild(raw);
     });
 }
+
