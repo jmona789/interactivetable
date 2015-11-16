@@ -1,6 +1,3 @@
-
-var secondsCount = Math.floor( Math.random() * 5 + 6);
-var timerInterval;
 var removeRowBtns = document.getElementsByClassName("removeRowBtn")
 var tableRows = document.getElementsByTagName("tr")
 
