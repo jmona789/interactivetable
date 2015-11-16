@@ -1,9 +1,8 @@
-function removeRow(){
-  for(var i = 0;){
-    
-  }
-  alert("Hi");
-}  
+var removeRowBtns = document.getElementsByClassName("removeRowBtn")
+var tableRows = document.getElementsByTagName("tr")
 
-
-document.getElementsByClassName("remove")[0].addEventListener("click", removeRow);
+for(var i = 0; i < removeRowBtns.length; i++) {
+removeRowBtns[i].addEventListener("click", function() {
+  tableRows[i].parentNode.removeChild(tableRows[i]);
+    });
+}
