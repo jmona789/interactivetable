@@ -25,7 +25,9 @@ function addRow() {
   cell2.innerHTML = inputsArray[1].value;
   cell3.innerHTML = inputsArray[2].value;
   cell4.innerHTML = '<button class="btn btn-danger removeRowBtn" inputtype="button" rawLink="r1" value="Delete">X</button>';
-  
+  document.getElementById("firstNameForm").reset();
+  document.getElementById("lastNameForm").reset();
+  document.getElementById("emailForm").reset();
 
   /*document.getElementById("newRowFirstName").innerHTML = inputsArray[0].value;
   document.getElementById("newRowLastName").innerHTML = inputsArray[0].value;
