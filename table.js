@@ -1,12 +1,13 @@
 var removeRowBtns = document.getElementsByClassName("removeRowBtn");
 var tableRows = document.getElementsByTagName("tr");
 var table = document.getElementsByTagName("table")[0];
-var newRowNum = 4
+var newRowNum = 4;
 
 for(var i = 0; i < removeRowBtns.length; i++) {
    removeRowBtns[i].addEventListener("click", function(e) {
       var raw = document.getElementById(e.target.getAttribute("rawLink"));
       raw.parentNode.removeChild(raw);
+      newRowNum --;
     });
 }
 
@@ -26,6 +27,8 @@ function addRow() {
   cell2.innerHTML = inputsArray[1].value;
   cell3.innerHTML = inputsArray[2].value;
   cell4.innerHTML = '<button class="btn btn-danger removeRowBtn" inputtype="button" rawLink="r'+newRowNum+'" value="Delete">X</button>';
+  newRow.id = "r" + newRowNum;
+  newRowNum ++;
   document.getElementById("firstNameForm").reset();
   document.getElementById("lastNameForm").reset();
   document.getElementById("emailForm").reset();
@@ -34,11 +37,9 @@ function addRow() {
    removeRowBtns[i].addEventListener("click", function(e) {
       var raw = document.getElementById(e.target.getAttribute("rawLink"));
       raw.parentNode.removeChild(raw);
+      newRowNum --;
     });
   }
-  newRow.id = "r" + newRowNum
-  newRowNum += 1
-
 }
 
 
